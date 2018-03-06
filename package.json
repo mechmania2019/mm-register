@@ -1,0 +1,22 @@
+{
+  "name": "mm-register",
+  "version": "1.0.0",
+  "description": "microservice for registering - Mechmania 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tko22/mm-register.git"
+  },
+  "author": "Timothy Ko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tko22/mm-register/issues"
+  },
+  "homepage": "https://github.com/tko22/mm-register#readme",
+  "dependencies": {
+    "micro": "^9.1.0"
+  }
+}
