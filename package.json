@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tko22/mm-register#readme",
   "dependencies": {
-    "micro": "^9.1.0"
+    "micro": "^9.1.0",
+    "mm-schemas": "github:pranaygp/mm-schemas"
   }
 }
