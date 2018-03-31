@@ -23,6 +23,6 @@ module.exports = async (req, res) => {
 
     return newTeam
   } catch (err) {
-    return send(res, 400, err.message)
+    return send(res, 401, err.message)
   }
 }
