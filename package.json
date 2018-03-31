@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/tko22/mm-register#readme",
   "dependencies": {
+    "dotenv": "^5.0.1",
+    "dotenv-cli": "^1.4.0",
+    "global": "^4.3.2",
     "micro": "^9.1.0",
     "mm-schemas": "pranaygp/mm-schemas",
     "mongoose": "^5.0.9"
