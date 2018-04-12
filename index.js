@@ -5,6 +5,9 @@ const cors = require('micro-cors')()
 
 mongoose.connect(process.env.MONGO_URI)
 mongoose.Promise = global.Promise
+mongoose.connection
+  .once('open', () => console.log('Connected to MongoLab instance.'))
+  .on('error', error => console.log('Error connecting to MongoLab:', error))
 
 const handler = async (req, res) => {
   try {
@@ -24,7 +27,7 @@ const handler = async (req, res) => {
 
     return newTeam
   } catch (err) {
-    return send(res, 401, err.message)
+    return send(res, 400, err.message)
   }
 }
 module.exports = cors(handler)
