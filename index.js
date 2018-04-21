@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const { Team } = require('mm-schemas')(mongoose)
 const cors = require('micro-cors')()
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URL)
 mongoose.Promise = global.Promise
 mongoose.connection
   .once('open', () => console.log('Connected to MongoLab instance.'))
