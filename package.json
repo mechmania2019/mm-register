@@ -23,7 +23,10 @@
     "global": "^4.3.2",
     "micro": "^9.1.0",
     "micro-cors": "^0.1.0",
-    "mm-schemas": "pranaygp/mm-schemas",
+    "mm-schemas": "mechmania2018/mm-schemas",
     "mongoose": "^5.0.9"
+  },
+  "now": {
+    "alias": ["register.mechmania.io"]
   }
 }
