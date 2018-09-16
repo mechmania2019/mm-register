@@ -25,8 +25,5 @@
     "micro-cors": "^0.1.0",
     "mm-schemas": "mechmania2018/mm-schemas",
     "mongoose": "^5.0.9"
-  },
-  "now": {
-    "alias": ["register.mechmania.io"]
   }
 }
