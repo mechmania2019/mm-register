@@ -13,21 +13,13 @@ const handler = async (req, res) => {
   try {
     const data = await json(req)
     console.log('Recieved Request: ', data)
-    // check if team exists or not
-    const team = await Team.find({ name: data.name })
-    if (team.length !== 0) {
-      return send(res, 401, 'Team already exists')
-    }
-
     const newTeam = new Team({
       name: data.name,
       email: data.email
     })
-    newTeam.save()
-
-    return newTeam
+    return await newTeam.save()
   } catch (err) {
-    return send(res, 400, err.message)
+    return send(res, 401, "Team already exists")
   }
 }
 module.exports = cors(handler)
