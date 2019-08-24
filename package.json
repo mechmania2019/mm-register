@@ -1,29 +1,30 @@
 {
   "name": "mm-register",
   "version": "1.0.0",
-  "description": "microservice for registering - Mechmania 2018",
+  "description": "microservice for registering - Mechmania 2019",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "micro"
+    "start": "node index.js",
+    "build": "dotenv yarn start",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tko22/mm-register.git"
+    "url": "git+https://github.com/mechmania2019/register"
   },
-  "author": "Timothy Ko",
+  "author": "Angie Cheng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tko22/mm-register/issues"
+    "url": "https://github.com/mechmania2019/register/issues"
   },
-  "homepage": "https://github.com/tko22/mm-register#readme",
+  "homepage": "https://github.com/mechmania2019/register/blob/master/README.md",
   "dependencies": {
-    "dotenv": "^5.0.1",
-    "dotenv-cli": "^1.4.0",
-    "global": "^4.3.2",
-    "micro": "^9.1.0",
-    "micro-cors": "^0.1.0",
+    "global": "^4.3.2", 
     "mm-schemas": "0.0.2",
     "mongoose": "^5.0.9"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "dotenv-cli": "^1.4.0"
   }
 }

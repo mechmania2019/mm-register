@@ -1,13 +1,21 @@
-const { send, json } = require('micro')
 const mongoose = require('mongoose')
 const { Team } = require('mm-schemas')(mongoose)
-const cors = require('micro-cors')()
 
 mongoose.connect(process.env.MONGO_URL)
 mongoose.Promise = global.Promise
 mongoose.connection
   .once('open', () => console.log('Connected to MongoLab instance.'))
   .on('error', error => console.log('Error connecting to MongoLab:', error))
+
+const json = async req => new Promise(resolve => {
+  let data = []
+  req.on('data', chunk => {
+    data.push(chunk)
+  });
+  req.on('end', () => {
+    resolve(JSON.parse(data));
+  })
+});
 
 const handler = async (req, res) => {
   try {
@@ -17,9 +25,10 @@ const handler = async (req, res) => {
       name: data.name,
       email: data.email
     })
-    return await newTeam.save()
+    res.end(JSON.stringify(await newTeam.save()));
   } catch (err) {
-    return send(res, 401, "Team already exists")
+    res.statusCode = 401;
+    res.end("Team already exists");
   }
 }
-module.exports = cors(handler)
+module.exports = handler
