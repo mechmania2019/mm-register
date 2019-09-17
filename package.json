@@ -19,12 +19,12 @@
   },
   "homepage": "https://github.com/mechmania2019/register/blob/master/README.md",
   "dependencies": {
-    "global": "^4.3.2", 
-    "mm-schemas": "0.0.2",
-    "mongoose": "^5.0.9"
+    "global": "4.3.2", 
+    "mm-schemas": "0.0.8",
+    "mongoose": "5.0.9"
   },
   "devDependencies": {
-    "dotenv": "^5.0.1",
-    "dotenv-cli": "^1.4.0"
+    "dotenv": "5.0.1",
+    "dotenv-cli": "1.4.0"
   }
 }
