@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 const { Team } = require('mm-schemas')(mongoose)
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true});
+mongoose.set('useCreateIndex', true);
 mongoose.Promise = global.Promise
 mongoose.connection
   .once('open', () => console.log('Connected to MongoLab instance.'))
