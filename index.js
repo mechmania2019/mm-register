@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const { Team } = require('mm-schemas')(mongoose)
 
-mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true});
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useCreateIndex', true);
 mongoose.Promise = global.Promise
 mongoose.connection
